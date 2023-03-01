@@ -1,0 +1,112 @@
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+p {
+  margin-left: 15px;
+}
+
+body {
+  background-color: #414a4c;
+  color: #f0e68c;
+  font-family: 'Times New Roman';
+}
+
+nav a {
+  color: #f0e68c
+  font-
+}
+
+form {
+  margin-left: 15px;
+}
+
+a {
+  color: #f0e68c;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 200%;
+  float:left;
+  width: 61.8%
+}
+
+h3.events {
+  font-size: 130%;
+}
+
+/* [ON BIG SCREENS] */
+/* (A) WRAPPER */
+#hamnav {
+  width: 38.2%;
+  background: #414a4c;
+  /* Optional */
+  position: sticky;
+  top: 0;
+  float:right;
+}
+
+/* (B) HORIZONTAL MENU ITEMS */
+#hamitems { display: flex; }
+#hamitems a {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 10px;
+  color: #f0e68c;
+  text-decoration: none;
+  text-align: left;
+}
+#hamitems a:hover { filter: brightness(150%)}
+
+/* (C) HIDE HAMBURGER */
+#hamnav label, #hamburger { display: none; }
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+  /* (A) BREAK INTO VERTICAL MENU */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+    background-color: #353839;
+  }
+
+  /* (B) SHOW HAMBURGER ICON */
+  #hamnav label {
+    display: inline-block;
+    color: #f0e68c;
+    background: #414a4c;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* (C) TOGGLE SHOW/HIDE MENU */
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
+}
+
+/* [DOES NOT MATTER] */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif, arial, sans-serif;
+}

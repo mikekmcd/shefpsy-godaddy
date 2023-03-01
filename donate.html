@@ -1,0 +1,126 @@
+<!doctype html>
+<html> 
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SP Donate</title>
+    <link type="text/css" rel="stylesheet" href="shefpsy.css">
+
+  </head>
+
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+
+<h2>Sheffield Psychedelic & Plant Medicine Community</h2>
+<br>
+<nav>
+  <a href="index.html">Home</a> |
+  <a href="resources.html">Resources</a> |
+  <a href="signalgroups.html">Signal Groups</a> |
+  <a href="services.html">Services</a> |
+  <a href="about.html">About</a> |
+  <a href="donate.html">Donate</a> |
+  <a href="index.php">Contact</a> |
+</nav>
+<br/>
+<br/>
+<h3>Donate</h3>
+<br/>
+<br>
+<p>
+  If you would like to support the development of this community and site please consider either a one off or monthly donation.
+</p>
+<br>
+<br>
+<p>
+  Donate with Bitcoin
+</p>
+<br>
+<br>
+<br>
+<p>
+  <style> .btcpay-form { display: inline-flex; align-items: center; justify-content: center; } .btcpay-form--inline { flex-direction: row; } .btcpay-form--block { flex-direction: column; } .btcpay-form--inline .submit { margin-left: 15px; } .btcpay-form--block select { margin-bottom: 10px; } .btcpay-form .btcpay-custom-container{ text-align: center; }.btcpay-custom { display: flex; align-items: center; justify-content: center; } .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: #DFE0E1; height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto 5px; display: inline-flex; justify-content: center; } .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; color: currentColor; background: transparent; border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; } .btcpay-form select:hover { border-color: #ccc; } .btcpay-form option { color: #000; background: rgba(0,0,0,.1); } .btcpay-input-price { -moz-appearance: textfield; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; background: #fff; }.btcpay-input-price::-webkit-outer-spin-button, .btcpay-input-price::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } </style>
+<form method="POST" action="https://btcpay0.voltageapp.io/api/v1/invoices" class="btcpay-form btcpay-form--block">
+  <input type="hidden" name="storeId" value="3zEnpwKEJxdwxaMrfhQybj8HTMmgXEkTymRtFfdbkR4e" />
+  <input type="hidden" name="notifyEmail" value="mikemcd30@protonmail.ch" />
+  <div class="btcpay-custom-container">
+    <div class="btcpay-custom">
+      <button class="plus-minus" type="button" onclick="handlePlusMinus(event);return false" data-type="-" data-step="1" data-min="1" data-max="20">-</button>
+      <input class="btcpay-input-price" type="number" name="price" min="1" max="20" step="1" value="1" data-price="1" style="width:3em;" oninput="handlePriceInput(event);return false" />
+      <button class="plus-minus" type="button" onclick="handlePlusMinus(event);return false" data-type="+" data-step="1" data-min="1" data-max="20">+</button>
+    </div>
+    <select name="currency">
+      <option value="USD">USD</option>
+      <option value="GBP" selected>GBP</option>
+      <option value="EUR">EUR</option>
+      <option value="BTC">BTC</option>
+    </select>
+  </div>
+  <input type="image" class="submit" name="submit" src="https://btcpay0.voltageapp.io/img/paybutton/pay.svg" style="width:209px" alt="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor">
+</form>
+<script>
+    function handlePlusMinus(event) {
+        event.preventDefault();
+        const root = event.target.closest('.btcpay-form');
+        const el = root.querySelector('.btcpay-input-price');
+        const step = parseInt(event.target.dataset.step) || 1;
+        const min = parseInt(event.target.dataset.min) || 1;
+        const max = parseInt(event.target.dataset.max);
+        const type = event.target.dataset.type;
+        const price = parseInt(el.value) || min;
+        if (type === '-') {
+            el.value = price - step < min ? min : price - step;
+        } else if (type === '+') {
+            el.value = price + step > max ? max : price + step;
+        }
+    }
+    
+    function handlePriceInput(event) {
+        event.preventDefault();
+        const root = event.target.closest('.btcpay-form');
+        const price = parseInt(event.target.dataset.price);
+        if (isNaN(event.target.value)) root.querySelector('.btcpay-input-price').value = price;
+        const min = parseInt(event.target.getAttribute('min')) || 1;
+        const max = parseInt(event.target.getAttribute('max'));
+        if (event.target.value < min) {
+            event.target.value = min;
+        } else if (event.target.value > max) { 
+            event.target.value = max;
+        }
+    }
+</script>
+</p>
+<br>
+<br>
+<br>
+<p>
+  Donate with GBP
+</p>
+<br>
+<br>
+<br>
+<p>
+  <form action="https://www.paypal.com/donate" method="post" target="_top">
+    <input type="hidden" name="hosted_button_id" value="7KCU642QUBS3E" />
+    <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+    <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
+    </form>    
+</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div>
+<footer id="footer">
+  <p>
+    &copy; Shefpsy 2022
+  </p>
+</footer>
+</div>
+</body>
+</html>
